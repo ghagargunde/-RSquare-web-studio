@@ -1,0 +1,36 @@
+.Home-header {
+    background-color: #282c34;
+    /* min-height: 100vh; */
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin-left: 18px;
+}
+.column {
+    float: left;
+    width: 66%;
+  
+  }
+
+  .column1 {
+    float: left;
+    width: 31%;
+}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .logout{
+    float: right;
+  }
+  .user{
+    margin-left: 18px;
+  }
+  
