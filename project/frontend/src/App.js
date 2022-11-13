@@ -1,3 +1,8 @@
+/* Copyright © samyak. - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Samyak Ghagargunde <samyakghagargunde66@gmail.com>, November 2022
+ */
 import React from "react";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
