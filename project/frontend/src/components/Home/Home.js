@@ -10,9 +10,16 @@ export default function Home() {
   const [data, setData] = useState([]);
   const [file, setFile] = useState([]);
   const [alert, setAlert] = useState(false);
+   const [uploaded, setUploaded] = useState(null);
   const handleDelete = async (name) => {
     console.log('Delete ' + name);
-    await Axios.delete(`http://localhost:5000/del:${name}`, data)
+    await Axios.delete(`http://localhost:5000/del:${name}`, data,
+    {
+      onUploadProgress: (data) => {
+        console.log(data.loaded , data.total)
+        setUploaded(Math.round((data.loaded / data.total) * 100))
+      },
+    })
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
     await fetchData();
@@ -93,6 +100,22 @@ export default function Home() {
                 setFile(file);
               }}
             />
+             <br />
+              {/* progress bar */}
+              {uploaded && (
+                <div className='progress mt-2'>
+                  <div
+                    className='progress-bar'
+                    role='progressbar'
+                    aria-valuenow={uploaded}
+                    aria-valuemin='0'
+                    aria-valuemax='100'
+                    style={{ width: `${uploaded}%` }}
+                  >
+                    {`${uploaded}%`}
+                  </div>
+                </div>
+              )}
     
           </div>
         </form>
