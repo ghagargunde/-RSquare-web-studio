@@ -6,8 +6,6 @@
  #
 
 
-
-gnome-terminal --window-with-profile=multi --command="bash -c 'cd ./backend && npm start'"
 gnome-terminal --window-with-profile=multi --command="bash -c 'cd ImageBack && npm run dev'"
 gnome-terminal --window-with-profile=multi --command="bash -c 'cd frontend && npm start'"
 

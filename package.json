@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"cd backend && npm start \" \"cd ImageBack && npm run dev\" \"cd frontend && npm start \""
+    "start": "concurrently  \"cd ImageBack && npm run dev\" \"cd frontend && npm start \""
   },
   "author": "Samyak Ghagargunde",
   "license": "ISC",
