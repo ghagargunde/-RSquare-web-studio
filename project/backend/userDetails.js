@@ -1,3 +1,9 @@
+/* Copyright © samyak. - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * Written by Samyak Ghagargunde <samyakghagargunde66@gmail.com>, November 2022
+ */
+
 const mongoose = require("mongoose");
 
 const UserDetailsScehma = new mongoose.Schema(
